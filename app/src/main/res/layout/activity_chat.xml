@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".features.chat.presentation.activities.ChatActivity">
+
+    <androidx.recyclerview.widget.RecyclerView
+            tools:listitem="@layout/chat_item"
+            android:id="@+id/rvChat"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/clChatFooter"
+            android:layout_width="0dp"
+            android:layout_height="0dp">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clChatFooter"
+            android:background="@color/colorPrimaryDark"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+        <EditText
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:background="@drawable/background_message"
+                app:layout_constraintEnd_toStartOf="@+id/ibChatSent"
+                android:hint="Aa"
+                android:id="@+id/etChatMessage"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintHorizontal_weight="9"
+                android:layout_width="0dp"
+                android:layout_margin="4dp"
+                android:layout_height="match_parent"/>
+        <ImageButton
+                android:clickable="false"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_send"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/etChatMessage"
+                app:layout_constraintHorizontal_weight="1"
+                android:id="@+id/ibChatSent"
+                android:layout_width="0dp"
+                android:layout_height="0dp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FFCA28</color>
+    <color name="colorPrimaryDark">#FFA000</color>
+    <color name="colorAccent">#F57C00</color>
+    <color name="colorFirebaseYellowOpacity">#33FFCA28</color>
+    <color name="colorFirebaseAmberOpacity">#33FFA000</color>
+    <color name="colorFirebaseOrangeOpacity">#33F57C00</color>
+</resources>

@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Realtime Chat Firestore</string>
+    <!--region Chat Username DialogFragment-->
+    <string name="chat_username_dialogfragment_accept">Aceptar</string>
+    <string name="chat_username_dialogfragment_title">Ingresa tu nickname</string>
+    <string name="chat_username_dialogfragment_hint_username">Ingresa tu nickname</string>
+    <!--endregion-->
+</resources>
