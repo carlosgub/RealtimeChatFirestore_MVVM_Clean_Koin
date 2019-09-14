@@ -84,3 +84,5 @@ lint/tmp/
 .idea/codeStyles/Project.xml
 
 app/.DS_Store
+
+app/google-services.json
