@@ -49,7 +49,7 @@ abstract class BaseDialogFragment : DialogFragment() {
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
-        dialog.window?.setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT)
+        dialog?.window?.setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT)
         super.onActivityCreated(savedInstanceState)
     }
 

@@ -19,19 +19,6 @@ class FirestoreFirebase (val db: FirebaseFirestore){
         return Observable.create {
             try{
                 val chatRef = db.collection(F_CHAT).orderBy("timestamp")
-                /*chatRef.get().addOnCompleteListener {task->
-                    if(task.isSuccessful){
-                        task.result?.forEach {queryDocumentSnapshot: QueryDocumentSnapshot? ->
-                            queryDocumentSnapshot?.let{query->
-                                it.onNext(mChatFMapper.map(query.data))
-                            }
-                        }
-                        it.onComplete()
-                    }else{
-                        it.onError(Throwable("Hubo un error"))
-                    }
-                }*/
-
                 chatRef.addSnapshotListener { snapshots, e ->
                     for (dc in snapshots!!.documentChanges) {
                         when (dc.type) {
