@@ -1,7 +1,7 @@
-apply plugin: (BuildPlugins.androidApplication)
-apply plugin: (BuildPlugins.kotlinAndroid)
-apply plugin: (BuildPlugins.kotlinAndroidExtensions)
-apply plugin: (BuildPlugins.googleServices)
+apply plugin: (Pluggins.androidApplication)
+apply plugin: (Pluggins.kotlinAndroid)
+apply plugin: (Pluggins.kotlinAndroidExtensions)
+apply plugin: (Pluggins.googleServices)
 
 android {
     compileSdkVersion (AndroidSdk.compile)
@@ -17,6 +17,25 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    flavorDimensions "version"
+    productFlavors {
+        orange {
+            dimension (Orange.dimension)
+            minSdkVersion (AndroidSdk.min)
+            applicationIdSuffix (Orange.applicationIdSuffix)
+            targetSdkVersion (AndroidSdk.target)
+            versionCode (Orange.versionCode)
+            versionName (Orange.versionName)
+        }
+        blue {
+            dimension (Blue.dimension)
+            minSdkVersion (AndroidSdk.min)
+            applicationIdSuffix (Blue.applicationIdSuffix)
+            targetSdkVersion (AndroidSdk.target)
+            versionCode (Blue.versionCode)
+            versionName (Blue.versionName)
         }
     }
 }

@@ -86,3 +86,5 @@ lint/tmp/
 app/.DS_Store
 
 app/google-services.json
+
+app/src/blue/google-services.json

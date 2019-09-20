@@ -1,7 +1,6 @@
 const val kotlinVersion = "1.3.21"
 
-object BuildPlugins {
-
+object Build {
     object Versions {
         const val buildToolsVersion = "3.4.2"
         const val googleServicesVersion = "4.2.0"
@@ -11,13 +10,15 @@ object BuildPlugins {
     const val kotlinGradlePlugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion"
     const val googleServicesPlugin =
         "com.google.gms:google-services:${Versions.googleServicesVersion}"
+
+}
+
+object Pluggins{
     const val androidApplication = "com.android.application"
     const val kotlinAndroid = "kotlin-android"
     const val kotlinAndroidExtensions = "kotlin-android-extensions"
     const val googleServices = "com.google.gms.google-services"
-
 }
-
 object AndroidSdk {
     const val min = 21
     const val compile = 29
@@ -25,6 +26,22 @@ object AndroidSdk {
     const val buildToolsVersion = "29.0.2"
 }
 
+//Flavors
+private object Orange {
+    const val dimension = "version"
+    const val applicationIdSuffix = ".orange"
+    const val versionCode = 1
+    const val versionName = "1.0"
+}
+
+private object Blue{
+    const val dimension = "version"
+    const val applicationIdSuffix = ".blue"
+    const val versionCode = 1
+    const val versionName = "1.0"
+}
+
+//Librarias
 object Libraries {
     private object Versions {
         //Android X
